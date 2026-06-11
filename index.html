@@ -48,7 +48,7 @@
     font-size:13px;letter-spacing:.22em;text-transform:uppercase;
     color:var(--pink);font-weight:500;
     display:flex;align-items:center;gap:10px;
-    margin:0 0 14px;width:fit-content;
+    margin:16px 0;width:fit-content;
   }
   .eyebrow::before{content:"";width:28px;height:1px;background:var(--pink)}
 
@@ -85,7 +85,22 @@
   .chip b{color:var(--text);font-weight:600}
 
   /* SECTION */
-  section{padding:54px 0}
+  section{padding:0}
+
+  /* PART 2 — distinct panel section */
+  .part-wrap{max-width:880px;margin:64px auto 0;padding:0 24px}
+  .part{
+    background:#0F0F12;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:28px;
+    padding:46px 40px;
+  }
+  .part-head{margin-bottom:30px}
+  .part-title{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(34px,5vw,54px);letter-spacing:-.015em;line-height:1.04;margin:0;
+  }
+  .part-head .eyebrow{margin:14px 0 0}
   .s-head{margin-bottom:30px}
   .s-title{
     font-family:var(--display);font-weight:700;
@@ -94,7 +109,7 @@
   .lead{font-size:17px;color:#C9C9CF;max-width:640px}
   .lead + .lead{margin-top:14px}
 
-  hr.div{border:none;height:1px;background:var(--line);margin:8px 0}
+  hr.div{border:none;height:1px;background:var(--line);margin:20px 0 60px}
 
   /* core areas mini grid */
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
@@ -162,7 +177,7 @@
 
   /* final */
   .final{
-    margin:40px 0 90px;border-radius:24px;padding:46px 38px;text-align:center;
+    margin:60px 0 90px;border-radius:24px;padding:46px 38px;text-align:center;
     background:linear-gradient(120deg,rgba(255,46,147,.14),rgba(155,92,255,.14));
     border:1px solid var(--line);position:relative;overflow:hidden;
   }
@@ -179,6 +194,8 @@
     .grid3{grid-template-columns:1fr}
     .cols{grid-template-columns:1fr}
     header{padding:88px 0 56px}
+    .part-wrap{margin-top:44px;padding:0 16px}
+    .part{padding:28px 22px;border-radius:20px}
   }
   @media(prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none;transition:none}
@@ -193,7 +210,7 @@
   <header class="wrap">
     <span class="eyebrow">Glam AI · Design Hackathon</span>
     <h1 class="hero-h1">Build the next<br><span class="grad">use case</span> for Glam AI.</h1>
-    <p class="hero-sub">A hackathon for designers and product thinkers who want to shape an AI-native product — not redesign it.</p>
+    <p class="hero-sub">A hackathon for designers and product thinkers who want to shape an AI-native product.</p>
     <div class="hero-actions">
       <a class="btn" href="https://apps.apple.com/cy/app/glam-ai-reels-creator/id1545593132" target="_blank" rel="noopener">Open the app →</a>
       <span class="chip">Goal: <b>a new, meaningful use case</b></span>
@@ -213,12 +230,11 @@
     </div>
   </section>
 
-  <div class="wrap"><hr class="div"></div>
-
-  <section class="wrap reveal">
-    <div class="s-head">
-      <span class="eyebrow">The challenge</span>
-      <h2 class="s-title">Propose a new use case — and design it</h2>
+  <div class="part-wrap reveal">
+   <section class="part">
+    <div class="part-head">
+      <h1 class="part-title">The Challenge</h1>
+      <span class="eyebrow">Task</span>
     </div>
     <p class="lead">Your task is to propose a <b style="color:var(--text)">new, meaningful use case</b> — a new feature, functionality extension, or user flow for one or more areas (Feed, Shots, AI Chat) — and present it as a well-thought-out concept with mockups.</p>
     <div class="callout warn">
@@ -229,11 +245,9 @@
       <span class="ic">🎨</span>
       <div><b>Use our Figma UI kit.</b> Building your mockups with our ready-made components is required. → <a class="lk" href="[Figma link]" target="_blank" rel="noopener">Open the kit</a></div>
     </div>
-  </section>
 
-  <div class="wrap"><hr class="div"></div>
+    <hr class="div">
 
-  <section class="wrap reveal">
     <div class="s-head">
       <span class="eyebrow">Product areas</span>
       <h2 class="s-title">Where you can build</h2>
@@ -259,14 +273,12 @@
       <div class="uxd"><b>What users do:</b> turn an idea into a finished image through conversation, refine results iteratively, make targeted edits, and create videos.</div>
       <div class="dir"><span>Directions to explore</span>Creating and editing images through conversation · turning a vague idea into a clear concept · personalization based on the user's style and past work · support for remixes and iterative edits. Focus on fundamental product ideas, not minor interface changes.</div>
     </div>
-  </section>
 
-  <div class="wrap"><hr class="div"></div>
+    <hr class="div">
 
-  <section class="wrap reveal">
     <div class="s-head">
       <span class="eyebrow">What to submit</span>
-      <h2 class="s-title">Deliverables & structure</h2>
+      <h2 class="s-title">Deliverables &amp; structure</h2>
     </div>
     <div class="cols">
       <div class="col">
@@ -293,7 +305,8 @@
         </ul>
       </div>
     </div>
-  </section>
+   </section>
+  </div>
 
   <div class="wrap">
     <div class="final reveal">
