@@ -32,7 +32,7 @@
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:24px;padding-right:24px}
   a{color:inherit}
 
   /* ambient glow */
@@ -47,7 +47,8 @@
     font-family:var(--display);
     font-size:13px;letter-spacing:.22em;text-transform:uppercase;
     color:var(--pink);font-weight:500;
-    display:inline-flex;align-items:center;gap:10px;
+    display:flex;align-items:center;gap:10px;
+    margin:0 0 14px;width:fit-content;
   }
   .eyebrow::before{content:"";width:28px;height:1px;background:var(--pink)}
 
@@ -66,7 +67,7 @@
     -webkit-background-clip:text;background-clip:text;color:transparent;
   }
   .hero-sub{margin-top:26px;font-size:19px;color:var(--muted);max-width:560px}
-  .hero-actions{margin-top:38px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .hero-actions{margin-top:38px;display:flex;flex-wrap:wrap;gap:14px;align-items:stretch}
   .btn{
     display:inline-flex;align-items:center;gap:9px;
     font-family:var(--display);font-weight:500;font-size:15px;
@@ -79,7 +80,7 @@
   .chip{
     display:inline-flex;align-items:center;gap:8px;
     font-size:13px;color:var(--muted);
-    border:1px solid var(--line);padding:11px 16px;border-radius:999px;
+    border:1px solid var(--line);padding:0 18px;border-radius:999px;
   }
   .chip b{color:var(--text);font-weight:600}
 
@@ -103,7 +104,7 @@
   }
   .mini h4{font-family:var(--display);font-size:16px;margin-bottom:6px}
   .mini p{font-size:14px;color:var(--muted)}
-  .mini .tag{font-size:12px;color:var(--pink);font-family:var(--display);letter-spacing:.08em;text-transform:uppercase}
+  .mini .tag{display:block;margin-bottom:8px;font-size:15px;color:var(--pink);font-family:var(--display);font-weight:500;letter-spacing:.02em}
 
   /* callouts */
   .callout{
@@ -206,9 +207,9 @@
     </div>
     <p class="lead">Our team builds Glam — an AI-powered photo and video creation and editing app. Glam helps users create, transform, and share visual content with AI. The product already has three core areas:</p>
     <div class="grid3">
-      <div class="mini"><span class="tag">Chat</span><h4>AI Chat</h4><p>Describe what you want to create or change.</p></div>
-      <div class="mini"><span class="tag">Shots</span><h4>Shots</h4><p>Trending templates, ideas, and inspiration to generate from.</p></div>
-      <div class="mini"><span class="tag">Feed</span><h4>Feed</h4><p>Explore, remix, and engage with other people's creations.</p></div>
+      <div class="mini"><span class="tag">AI Chat</span><p>Describe what you want to create or change.</p></div>
+      <div class="mini"><span class="tag">Daily Shots</span><p>Trending templates, ideas, and inspiration to generate from.</p></div>
+      <div class="mini"><span class="tag">AI Feed</span><p>Explore, remix, and engage with other people's creations.</p></div>
     </div>
   </section>
 
@@ -226,7 +227,7 @@
     </div>
     <div class="callout kit">
       <span class="ic">🎨</span>
-      <div><b>Use our Figma UI kit.</b> Building your mockups with our ready-made components is required. → <a class="lk" href="[https://www.figma.com/design/sBnrfy9U4emdTo97VS8pek/UI-Kit?node-id=0-1&p=f&t=diE2RC8EFuRUpBYg-0]" target="_blank" rel="noopener">Open the kit</a></div>
+      <div><b>Use our Figma UI kit.</b> Building your mockups with our ready-made components is required. → <a class="lk" href="[Figma link]" target="_blank" rel="noopener">Open the kit</a></div>
     </div>
   </section>
 
