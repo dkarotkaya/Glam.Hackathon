@@ -199,6 +199,35 @@
   .dir{margin-top:14px;font-size:13.5px;color:var(--muted)}
   .dir span{color:var(--text);font-family:var(--display);font-weight:500;display:block;margin-bottom:4px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 
+  /* TASK — numbered steps */
+  .steps{list-style:none;counter-reset:s;margin-top:28px;display:flex;flex-direction:column;gap:30px}
+  .step{display:flex;gap:18px;align-items:flex-start}
+  .step-num{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+    font-family:var(--display);font-weight:700;font-size:16px;color:#fff;
+    background:linear-gradient(120deg,var(--pink),var(--purple))}
+  .step-body{flex:1;min-width:0}
+  .step-title{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.01em;margin-bottom:6px}
+  .step-desc{font-size:16px;font-weight:500;color:var(--muted)}
+  .step-desc .lk{color:var(--pink);font-weight:700;text-decoration:none;white-space:nowrap}
+  .step .callout{margin-top:14px}
+  .step .sub{margin-top:12px}
+
+  /* track accordions inside step 1 */
+  .tracks{margin-top:16px;display:flex;flex-direction:column;gap:12px}
+  .track{border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden}
+  .track > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;
+    padding:16px 18px;font-family:var(--display);font-weight:700;font-size:18px;color:#fff}
+  .track > summary::-webkit-details-marker{display:none}
+  .track > summary:hover{background:rgba(255,255,255,.03)}
+  .t-tag{flex:none;font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.04em;
+    color:#fff;background:linear-gradient(120deg,var(--pink),var(--purple));padding:5px 10px;border-radius:8px}
+  .t-name{flex:1}
+  .t-chev{flex:none;width:9px;height:9px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);
+    transform:rotate(45deg);transition:transform .25s ease;margin-right:4px;margin-top:-4px}
+  .track[open] > summary .t-chev{transform:rotate(-135deg);margin-top:2px}
+  .track-body{padding:0 18px 18px}
+  .track-body > *:first-child{margin-top:6px}
+
   /* submit card */
   .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
   .col{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
@@ -399,7 +428,7 @@
         <a href="#about">About</a>
         <a href="#rewards">Rewards</a>
         <a href="#dates">Dates</a>
-        <a href="#challenge">Challenge</a>
+        <a href="#task">Tasks</a>
       </div>
       <a class="nav-cta" href="https://tally.so/r/EkaQJA" target="_blank" rel="noopener">Register</a>
     </div>
@@ -485,73 +514,105 @@
 
   <div class="wrap"><hr class="div"></div>
 
-  <div class="part-wrap reveal" id="challenge">
+  <div class="part-wrap reveal" id="task">
    <section class="part">
     <div class="part-head">
-      <h1 class="part-title">The Challenge</h1>
+      <h1 class="part-title">Tasks</h1>
     </div>
-    <p class="lead">Your task is to create mockup designs for the Glam AI app.</p>
-    <p class="lead">Inside Glam AI, we have developed features such as Glam AI Feed, Glam AI Daily Shots, and Glam AI Chat.</p>
-    <p class="lead">Each designer can pick one or several of these features and propose new use cases, feature ideas, or user flows, then present them through thoughtful mockup designs.</p>
-    <p class="lead">We are not looking for UI redesigns or small visual tweaks — the focus is on product thinking and original concepts.</p>
-    <div class="callout kit">
-      <span class="ic">🎨</span>
-      <div><b>You'll work with our Figma UI kit.</b> We'll provide a Figma file with ready-made components, and your mockups must be built with it. The kit link will be shared with participants separately.</div>
-    </div>
+    <p class="lead">Create a mockup design for the Glam AI app. Pick a track, get to know the product, and turn a strong idea into a thoughtful mockup. Here's the flow:</p>
 
-    <hr class="div">
-
-    <div class="s-head">
-      <h2 class="s-title">Where you can build</h2>
-    </div>
-
-    <div class="area">
-      <div class="area-top"><span class="area-num">1</span><span class="area-name">AI Feed</span></div>
-      <div class="area-cols">
-        <div class="vbox portrait"><video src="ai-feed.mp4" autoplay loop muted playsinline preload="metadata"></video></div>
-        <div class="area-text">
-          <p>The Feed works like a social network. The user's main goal is to see what others create and post, and what's currently trending.</p>
-          <div class="uxd"><b>What users do:</b> like, comment, follow creators, post their own work, and get inspired by others.</div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num">1</span>
+        <div class="step-body">
+          <h3 class="step-title">Choose your track</h3>
+          <p class="step-desc">Pick one or several of the three tracks below — tap a track to see what it is and what users do there.</p>
+          <div class="tracks">
+            <details class="track" open>
+              <summary><span class="t-tag">Track 1</span><span class="t-name">AI Feed</span><span class="t-chev"></span></summary>
+              <div class="track-body">
+                <div class="area-cols">
+                  <div class="vbox portrait"><video src="ai-feed.mp4" autoplay loop muted playsinline preload="metadata"></video></div>
+                  <div class="area-text">
+                    <p>The Feed works like a social network. The user's main goal is to see what others create and post, and what's currently trending.</p>
+                    <div class="uxd"><b>What users do:</b> like, comment, follow creators, post their own work, and get inspired by others.</div>
+                  </div>
+                </div>
+              </div>
+            </details>
+            <details class="track">
+              <summary><span class="t-tag">Track 2</span><span class="t-name">Daily Shots</span><span class="t-chev"></span></summary>
+              <div class="track-body">
+                <div class="area-img"><img src="daily-shots-flow.png" alt="Daily Shots: user photos to personal AI model to daily content" loading="lazy"></div>
+                <p>Glam AI Daily Shots lets users create a personal AI profile by uploading up to 10 photos of themselves.</p>
+                <p>Once trained, the profile remembers the user's identity, facial features, and body features. Users can then try different photo templates by simply tapping the “Try” button, with generations created almost instantly.</p>
+                <div class="uxd"><b>What users do:</b> create a personal AI profile from their own photos, then quickly generate content from ready-made templates with one tap — no prompt-writing from scratch.</div>
+              </div>
+            </details>
+            <details class="track">
+              <summary><span class="t-tag">Track 3</span><span class="t-name">AI Chat</span><span class="t-chev"></span></summary>
+              <div class="track-body">
+                <div class="vbox"><video src="ai-chat.mp4" autoplay loop muted playsinline preload="metadata"></video></div>
+                <p>A chat where users generate photos from their own prompt. They can send references, upload their own photos and ask to edit specific details, and create or edit videos.</p>
+                <div class="uxd"><b>What users do:</b> turn an idea into a finished image through conversation, refine results step by step, make targeted edits, create and edit videos — and open any creation from across the app right in the chat to keep working on it.</div>
+              </div>
+            </details>
+          </div>
         </div>
-      </div>
-    </div>
+      </li>
 
-    <div class="area">
-      <div class="area-top"><span class="area-num">2</span><span class="area-name">Daily Shots</span></div>
-      <div class="area-img"><img src="daily-shots-flow.png" alt="Daily Shots: user photos to personal AI model to daily content" loading="lazy"></div>
-      <p>Glam AI Daily Shots lets users create a personal AI profile by uploading up to 10 photos of themselves.</p>
-      <p>Once trained, the profile remembers the user's identity, facial features, and body features. Users can then try different photo templates by simply tapping the “Try” button, with generations created almost instantly.</p>
-      <div class="uxd"><b>What users do:</b> create a personal AI profile from their own photos, then quickly generate content from ready-made templates with one tap — no prompt-writing from scratch.</div>
-    </div>
+      <li class="step">
+        <span class="step-num">2</span>
+        <div class="step-body">
+          <h3 class="step-title">Explore the app</h3>
+          <p class="step-desc">Download Glam AI and dig into how it really works — your idea should fit the product. <a class="lk" href="https://apps.apple.com/cy/app/glam-ai-reels-creator/id1545593132" target="_blank" rel="noopener">Open the app →</a></p>
+        </div>
+      </li>
 
-    <div class="area">
-      <div class="area-top"><span class="area-num">3</span><span class="area-name">AI Chat</span></div>
-      <div class="vbox"><video src="ai-chat.mp4" autoplay loop muted playsinline preload="metadata"></video></div>
-      <p>A chat where users generate photos from their own prompt. They can send references, upload their own photos and ask to edit specific details, and create or edit videos.</p>
-      <div class="uxd"><b>What users do:</b> turn an idea into a finished image through conversation, refine results step by step, make targeted edits, create and edit videos — and open any creation from across the app right in the chat to keep working on it.</div>
-    </div>
+      <li class="step">
+        <span class="step-num">3</span>
+        <div class="step-body">
+          <h3 class="step-title">Propose a strong use case</h3>
+          <p class="step-desc">Come up with a new, meaningful idea for your track — a feature, a functionality extension, or a user flow.</p>
+        </div>
+      </li>
 
-    <hr class="div">
+      <li class="step">
+        <span class="step-num">4</span>
+        <div class="step-body">
+          <h3 class="step-title">Build the mockup</h3>
+          <p class="step-desc">Design your solution as a mockup — Figma, images, prototype, or presentation. We're not looking for UI redesigns or small visual tweaks; the focus is on product thinking and original concepts.</p>
+          <div class="callout kit">
+            <span class="ic">🎨</span>
+            <div><b>You'll work with our Figma UI kit.</b> We'll provide a Figma file with ready-made components, and your mockups must be built with it. The kit link will be shared with participants separately.</div>
+          </div>
+        </div>
+      </li>
 
-    <div class="s-head">
-      <h2 class="s-title">What to submit</h2>
-    </div>
-    <div class="col submit-card">
-      <ol class="del">
-        <li><b>Mockup</b><small>Figma, images, prototype, or presentation</small></li>
-        <li><b>Concept</b>
+      <li class="step">
+        <span class="step-num">5</span>
+        <div class="step-body">
+          <h3 class="step-title">Describe your idea</h3>
+          <p class="step-desc">Walk us through the concept so it's easy to grasp:</p>
           <ul class="sub">
             <li>Concept name</li>
-            <li>Area — Feed / Shots / AI Chat / Multiple</li>
+            <li>Track — AI Feed / Daily Shots / AI Chat (one or several)</li>
             <li>User problem</li>
             <li>Proposed solution</li>
-            <li>User flow</li>
             <li>Key screens</li>
             <li>Why it matters</li>
           </ul>
-        </li>
-      </ol>
-    </div>
+        </div>
+      </li>
+
+      <li class="step">
+        <span class="step-num">6</span>
+        <div class="step-body">
+          <h3 class="step-title">Final — present your solution</h3>
+          <p class="step-desc">Present your idea to the Glam AI team. An offline format in St. Petersburg is possible.</p>
+        </div>
+      </li>
+    </ol>
    </section>
   </div>
 
