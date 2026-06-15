@@ -320,7 +320,7 @@
 
   /* GANTT timeline */
   .gantt-scroll{margin-top:20px;overflow-x:auto}
-  .gantt{position:relative;min-width:520px}
+  .gantt{position:relative;min-width:780px}
   .g-cal{position:relative;height:26px}
   .g-tick{position:absolute;top:2px;transform:translateX(-50%);font-family:var(--display);
     font-size:16px;letter-spacing:.04em;color:var(--muted);white-space:nowrap}
@@ -387,9 +387,10 @@
     .cols{grid-template-columns:1fr}
     .rewards{grid-template-columns:1fr}
     header{padding:40px 0 52px}
-    .part-wrap{padding:0 16px}
+    .wrap{padding-left:20px;padding-right:20px}
+    .part-wrap{padding:0 20px}
     .part{padding:0}
-    .nav-inner{padding:11px 16px}
+    .nav-inner{padding:11px 20px}
     .logo-svg{height:26px}
     .nav-links{display:none}
     .nav-cta{padding:8px 15px;font-size:13px}
@@ -397,6 +398,7 @@
     .about-photo{flex:none;max-width:280px;margin:0 auto}
     .area-cols{flex-direction:column;gap:18px}
     .area-cols .vbox{flex:none;max-width:240px;margin:0 auto}
+    .tracks{margin-left:-52px;width:calc(100% + 52px)}
   }
   @media(prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none;transition:none}
@@ -497,13 +499,13 @@
       <div class="gantt">
         <div class="g-cal">
           <span class="g-tick" style="left:0%">Jun 15</span>
-          <span class="g-tick" style="left:60%">Jun 25</span>
+          <span class="g-tick" style="left:57%">Jun 25</span>
           <span class="g-tick" style="left:67%">Jun 26</span>
         </div>
         <div class="g-track">
-          <div class="g-lines"><span style="left:0%"></span><span style="left:60%"></span><span style="left:67%"></span></div>
+          <div class="g-lines"><span style="left:0%"></span><span style="left:57%"></span><span style="left:67%"></span></div>
           <div class="g-rows">
-            <div class="g-row"><div class="g-bar" style="margin-left:0%;width:60%"><span class="g-chip">1</span><div class="g-tx"><div class="g-date">June 15–25</div><div class="g-label">Registration</div></div></div></div>
+            <div class="g-row"><div class="g-bar" style="margin-left:0%;width:57%"><span class="g-chip">1</span><div class="g-tx"><div class="g-date">June 15–25</div><div class="g-label">Registration</div></div></div></div>
             <div class="g-row"><div class="g-bar g-bar-dyn" style="margin-left:0%;width:67%"><span class="g-chip">2</span><div class="g-tx"><div class="g-date">Dynamic</div><div class="g-label">Brief — sent immediately after a participant registers</div></div></div></div>
             <div class="g-row"><div class="g-bar g-bar-final" style="margin-left:67%;width:33%"><span class="g-chip g-chip-ic">🏁</span><div class="g-tx"><div class="g-date">From June 26</div><div class="g-label">Final — St. Petersburg</div></div></div></div>
           </div>
