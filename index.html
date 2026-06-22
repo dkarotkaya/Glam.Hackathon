@@ -147,6 +147,17 @@
   }
   .lead{font-size:18px;font-weight:500;color:rgba(255,255,255,.72);max-width:640px}
   .lead + .lead{margin-top:14px}
+  .hl{font-weight:700;background:linear-gradient(100deg,var(--pink),var(--purple));
+    -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+  /* Why — Problem / Approach / Result */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:28px}
+  .why-item{position:relative;padding-left:18px}
+  .why-item::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:3px;
+    background:linear-gradient(var(--pink),var(--purple))}
+  .why-label{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--pink);margin-bottom:10px}
+  .why-item p{font-size:16px;font-weight:500;color:var(--muted)}
+  .why-item p b{color:var(--text);font-weight:700}
 
   hr.div{border:none;height:1px;background:var(--line);margin:40px 0}
 
@@ -399,6 +410,7 @@
     .area-cols{flex-direction:column;gap:18px}
     .area-cols .vbox{flex:none;max-width:240px;margin:0 auto}
     .tracks{margin-left:-52px;width:calc(100% + 52px)}
+    .why-grid{grid-template-columns:1fr;gap:20px}
   }
   @media(prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none;transition:none}
@@ -428,6 +440,7 @@
     <div class="nav-right">
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#why">Why</a>
         <a href="#rewards">Rewards</a>
         <a href="#dates">Dates</a>
         <a href="#task">Tasks</a>
@@ -460,6 +473,28 @@
           <div class="mini"><span class="tag">AI Chat</span><p>Describe what you want to create or change.</p></div>
           <div class="mini"><span class="tag">AI Feed</span><p>Explore, remix, and engage with other people's creations.</p></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="div"></div>
+
+  <section id="why" class="wrap reveal">
+    <div class="s-head">
+      <h2 class="s-title">Why this hackathon</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-label">Problem</div>
+        <p>Glam AI already has millions of creators — but our biggest challenge right now is <span class="hl">Retention</span>: getting people to come back and create again and again.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-label">Approach</div>
+        <p>We don't think the answer is one more button or screen. It's a <span class="hl">strong, original use case</span> that gives users a real reason to return.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-label">Result</div>
+        <p>That's exactly what we're looking for from you — ideas that turn Glam into a daily habit and <span class="hl">lift our Retention</span>.</p>
       </div>
     </div>
   </section>
